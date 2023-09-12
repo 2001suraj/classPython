@@ -1,0 +1,44 @@
+
+    
+     
+    *********************************--*********************************
+    
+                             Sunway Bhatbhateni system
+                                maitedevi Kathmandu
+                                
+    *********************************--*********************************
+    
+    ------------------------------------------------------------------------------------------------------------------------
+    
+    Customer Name : suraj
+    
+    Customer Id : amhvas
+    
+    Customer Address : 12
+    
+    Total Amount : 780
+    
+              
+              
+              1 product  = Rs.33 * 12 items 
+
+                          Amount : Rs.396 
+
+              
+              
+              
+              2 product  = Rs.32 * 12 items 
+
+                          Amount : Rs.384 
+
+              
+    
+    
+ 
+     
+     Mr/Mrs. suraj, you have purchased 2 items whose total price is 780 and discount is Rs.13.4 with discount rate 3%.So, You can to pay Rs.766.6
+
+    ------------------------------------------------------------------------------------------------------------------------
+    
+    
+    

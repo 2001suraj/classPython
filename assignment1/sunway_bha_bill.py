@@ -1,4 +1,4 @@
-
+file_path='/Users/suraj/programming/python/class/classPython/sunway_bill_text.txt'
 
 
 def initialDisplay():
@@ -12,6 +12,7 @@ def initialDisplay():
     '''
     
     print(display)
+    return display
     
 def userinput():
     totalAmount =0
@@ -59,32 +60,69 @@ def calculation():
     return (discountPercentage, discoutedValue,finalAmount)
     
 def outputData():
-    initialDisplay()
-    print('------------------------------------------------------------------------------------------------------------------------')
-    print()
-    print(f"Customer Name : {customerName}")
-    print(f"Customer Id : {customerId}")
-    print(f"Customer Address : {address}")
-    print('Total Amount '+ str(totalAmount))
-    for i in range(items):
-        print()
-        print(f'{str(i+1)} product  = Rs.{priceList[i]} * {quantityList[i]} items' )
-        print(f'            Amount : Rs.{amountList[i]}')
-        print()
-    print(f'''Mr/Mrs. {customerName}, you have purchased {items} items whose total price is {totalAmount} and discount is Rs.{discoutedValue} with discount rate {discountPercentage}%.So, You can to pay Rs.{finalAmount}''')  
-    print()
+    a=''
     
-    print('------------------------------------------------------------------------------------------------------------------------')
-  
+    for i in range(items):
+        a += f'''
+              
+              
+              {str(i+1)} product  = Rs.{priceList[i]} * {quantityList[i]} items \n
+                          Amount : Rs.{amountList[i]} \n
+              '''
+
+       
+    
+    display = f'''
+    
+    {initialDisplay()}
+    ------------------------------------------------------------------------------------------------------------------------
+    
+    Customer Name : {customerName}
+    
+    Customer Id : {customerId}
+    
+    Customer Address : {address}
+    
+    Total Amount : { str(totalAmount)}
+    {a}
+    
+    
+ 
+     
+     Mr/Mrs. {customerName}, you have purchased {items} items whose total price is {totalAmount} and discount is Rs.{discoutedValue} with discount rate {discountPercentage}%.So, You can to pay Rs.{finalAmount}
+
+    ------------------------------------------------------------------------------------------------------------------------
+    
+    
+    '''
+    # initialDisplay()
+    # print('------------------------------------------------------------------------------------------------------------------------')
+    # print()
+    # print(f"Customer Name : {customerName}")
+    # print(f"Customer Id : {customerId}")
+    # print(f"Customer Address : {address}")
+    # print('Total Amount '+ str(totalAmount))
+    # for i in range(items):
+    #     print()
+    #     print(f'{str(i+1)} product  = Rs.{priceList[i]} * {quantityList[i]} items' )
+    #     print(f'            Amount : Rs.{amountList[i]}')
+    #     print()
+    # print(f'''Mr/Mrs. {customerName}, you have purchased {items} items whose total price is {totalAmount} and discount is Rs.{discoutedValue} with discount rate {discountPercentage}%.So, You can to pay Rs.{finalAmount}''')  
+    # print()
+    
+    # print('------------------------------------------------------------------------------------------------------------------------')
+    
+    print(display)
+    return  display
 numberofUser=int(input("Enter the number of user : "))
-listofUser = []
+
 for j in range(numberofUser):
     customerId, customerName, address , items,priceList, quantityList, amountList ,price, quantity, amount ,totalAmount= userinput()
     discountPercentage, discoutedValue,finalAmount =  calculation() 
     outputData()
+    with open (file_path,'w') as file:
+     file.write(str(outputData()))
 
 
-
-
-
+ 
 
